@@ -1,6 +1,6 @@
 html {
   font-size: 1.2rem;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 
 a {
@@ -17,165 +17,183 @@ p {
 }
 
 html {
+  width: 100%;
   height: 100%;
 }
 
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
 
 .logo {
-  height: 16rem;
+  width: 100%;
 }
 
 .marmeid {
   position: absolute;
-  top: 1.6rem;
+  top: 1rem;
   right: 15%;
-  width: 80%;
+  width: 70%;
 }
 
 .banniere {
-  margin: -0.5rem;
-  opacity: 0.9;
-  max-height: 10rem;
+  margin: 0;
+}
+.banniere img {
+  width: 100%;
+  margin: 0;
 }
 
 .title {
-  -webkit-animation: title 1500ms  ease-in-out;
-          animation: title 1500ms  ease-in-out;
-}
-
-@-webkit-keyframes title {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    opacity: .1;
-  }
-  85%, 100% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
+  animation: title 1500ms ease-in-out;
 }
 
 @keyframes title {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-    opacity: .1;
+    transform: scaleX(0);
+    opacity: 0.1;
   }
   85%, 100% {
     opacity: 1;
   }
   100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    transform: scaleX(1);
   }
 }
-
 h1 {
-  font-family: 'Parisienne', cursive;
+  font-family: "Parisienne", cursive;
   text-align: center;
   padding-top: 2rem;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 .container {
   background-image: url("img/bigVilleRose.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
   margin-top: -2rem;
+  width: 100%;
 }
 
-.siteOne, .siteTwo {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.select__1, .select__2 {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 1rem;
-          column-gap: 1rem;
+  column-gap: 1rem;
   font-size: 0.6rem;
   margin-left: 2rem;
-  margin-top: 2rem;
 }
-
-.siteOne img, .siteTwo img {
-  width: 3rem;
+.select__1 img, .select__2 img {
+  width: 2.5rem;
+  height: auto;
 }
 
 .asset {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-weight: bold;
   row-gap: 1.5rem;
 }
-/* debut sans sass */
-.asset1{
-  animation-duration: 1200ms;
+.asset__1 {
+  animation-duration: 2000ms;
   animation-name: clignoter;
-  animation-iteration-count: infinite;  
+  animation-iteration-count: infinite;
+  animation-delay: 1500ms;
 }
-.asset2{
-  animation-duration: 1200ms;
+.asset__2 {
+  animation-duration: 2000ms;
   animation-name: clignoter;
-  animation-iteration-count: infinite;  
-  animation-delay: 300ms;
+  animation-iteration-count: infinite;
+  animation-delay: 2100ms;
 }
-.asset3{
-  animation-duration: 1200ms;
+.asset__3 {
+  animation-duration: 2000ms;
   animation-name: clignoter;
-  animation-iteration-count: infinite;  
-  animation-delay: 600ms;
+  animation-iteration-count: infinite;
+  animation-delay: 2700ms;
 }
-@keyframes clignoter {
-  0% {
-    color: #000;
-    font-weight: bold;
-  }
-  60% {
-    color: #ca719d;
-  }
-  100% {
-    color: #000;
-  }
-}
-
-.lastAsset {
+.asset__4 {
   font-weight: 700;
   border: 1px solid #000;
   border-radius: 15px;
-  padding:1rem;
-  animation: animate 4s 1 ;
-  animation-fill-mode: forwards;
-
+  padding: 1rem;
+  box-shadow: 2px 2px 8px #000;
+  transition: all 300ms;
+}
+.asset__4:hover {
+  transform: scale(1.1);
 }
 
+@keyframes clignoter {
+  0% {
+    color: #cd86fc;
+    font-weight: bold;
+  }
+  80% {
+    color: #f069b3;
+  }
+  100% {
+    color: #cd86fc;
+  }
+}
+.service {
+  font-size: 0.8rem;
+}
+.service__1 {
+  font-family: "parisienne";
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 1.5rem 0;
+  text-shadow: #000 0.1em 0.1em 0.2em;
+}
+.service__2 {
+  display: flex;
+  text-align: center;
+  column-gap: 2rem;
+  margin: 0.5rem;
+}
+.service__2 .fas {
+  margin-bottom: 0.5rem;
+}
+.service__2 p {
+  text-align: left;
+}
+.service__2 p::first-letter {
+  font-family: "Great Vibes", cursive;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.service__3 {
+  text-align: center;
+}
+.service__3--web {
+  font-size: 1.4rem;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-size: 85%;
+  animation: animate 6s infinite ease-out;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+.service__3 > p {
+  margin: 2rem;
+}
+.service__3--alone::first-letter {
+  font-family: "Great Vibes", cursive;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
 @keyframes animate {
   0% {
-  transform:scale(0);
+    background-position: -600%;
   }
-  100%
-  {
-    transform: scale(1);
-    
+  100% {
+    background-position: 600%;
   }
-  
 }
+
 /*# sourceMappingURL=style.css.map */
