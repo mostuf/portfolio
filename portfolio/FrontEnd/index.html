@@ -15,9 +15,7 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
     
@@ -27,9 +25,9 @@
 <body>
     <header>
         <div class="fixe">
-            <a href="lien.html"> A propos de moi </a>
-            <a href="lien.html"> Vos questions </a>
-            <a href="lien.html"> Contact </a>
+            <a href="presentation.html"> A propos de moi </a>
+            <a href="questions.html"> Vos questions </a>
+            <a href="#contact"> Contact </a>
          </div>
         <div class="logo">
             <p class="banniere"> 
@@ -51,9 +49,9 @@
             <p class="asset__4">Developpez votre présence en ligne</p>
         </section>
         <section class="service">
-            <p class="service__1">
-                Je crée pour vous
-            </p>
+            <h2 class="service__1">
+                Je crée à votre image
+            </h2>
             <div class="service__2">
                 <div class="service__2--store">
                     <i class="fas fa-store"></i>
@@ -80,13 +78,13 @@
                     Une création Web qui vous ressemble
                  </p>
                  <p class="service__3--alone">
-                    Vous pourrez modifier, rajouter ou supprimer vos produits sans aucune compétence informatique particulière!
+                    Vous pourrez modifier, rajouter ou supprimer vos produits sans compétence informatique<br> particulière!
                 </p> 
              </div>    
            
         </section>
         <section class="offerFirstSite">
-            <table class="select">
+            <table >
                 <thead>
                     <tr>
                         <th>
@@ -137,7 +135,7 @@
                     </tr>
                 </tbody>
             </table>
-            <table>
+            <table class="select">
                 <thead>
                     <tr>
                         <th >
@@ -172,8 +170,8 @@
                     </tr>
                     <tr>                        
                         <td>
-                            <i class="fas fa-times-circle"></i>
-                            maintenance 1h/mois si necessaire</td>
+                            <i class="fas fa-check-circle"></i>
+                            maintenance 1h/mois si necessaire les 12 premiers mois</td>
                     </tr>
                     <tr>                        
                         <td>
@@ -283,77 +281,85 @@
             </table>
 
         </section>
-        <section class="form">
-            <h1>Formulaire de contact</h1>
-      <form name="myForm" action="/file.php" onsubmit="return validateForm()" method="post">
-         <table class="form-style">
-            <tr>
-               <td>
-                  <label>
-                     Votre nom <span class="required">*</span>
-                  </label>
-               </td>
-               <td>
-                  <input type="text" name="name" class="long"/>
-                  <span class="error" id="errorname"></span>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <label>
-                     Votre adresse e-mail <span class="required">*</span>
-                  </label>
-               </td>
-               <td>
-                  <input type="email" name="email" class="long"/>
-                  <span class="error" id="erroremail"></span>
-               </td>
-            </tr>
-            <tr>
-               <td>
-                  <label>
-                     Message <span class="required">*</span>
-                  </label>
-               </td>
-               <td>
-                  <textarea name="message" class="long field-textarea"></textarea>
-                  <span class="error" id="errormsg"></span>
-               </td>
-            </tr>
-            <tr>
-               <td></td>
-               <td>
-                  <input type="submit" value="Envoyer">      
-                  <input type="reset" value="Réinitialiser"> 
-               </td>
-            </tr>
-         </table>
-      </form>
+        <section class="form" id="contact">
+            <h3>Formulaire de contact</h3>
+            <form action="mail.php" name="myForm"  method="post" id="formContact">
+                <table class="formContact">
+                    <tr>
+                        <td>
+                            <label for="username">Votre nom </label>
+                            <input class="username" 
+                                type="textarea" 
+                                name="username" 
+                                id="username" 
+                                title="Veuillez n'écrire que des lettres" pattern ="[A-z-_ çàâéèeîïù]{2,30}" placeholder="Votre nom" 
+                                required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="email">Votre mail</label>
+                            <input class="email" 
+                                type="email" 
+                                name="email" 
+                                id="email" 
+                                title="Veuillez écrire un mail valide" 
+                                pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]{2,}\.[a-zA-Z]{2,4}$" 
+                                placeholder="Votre email" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="message">Votre texte</label>
+                            <textarea class="message" 
+                                    type="textarea"
+                                    minlength="15"
+                                    maxlength="500"
+                                    rows="10" 
+                                    cols="40"
+                                    name="message" 
+                                    id="message" 
+                                    placeholder="Votre message"
+                                    title="Votre message doit contenir entre 15 et 300 caratères sans caractère spéciaux"
+                                    ></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" id="btnSubmitMessage" class="btn_enter" name="submit" value="Envoyer"
+                            >     
+                        </td>
+                    </tr>
+                </table>
+            </form>
         </section>
-      
+        <div class="pageUp">
+            <a href="#top"><img class="btnUp" src="img/btnUp.png" alt="bouton pour remonter en haut de la page"/></a>
+        </div>
 
     </main>
     <footer>
         <div class="footer">
-            <p class="copyright">
+            <div class="copyright">
                 <img src="img/copyright_25.png" alt="copyright">
-                2021 AURORE. Tous droits réservés
-            </p>
+                <p>2021 AURORE. Tous droits réservés</p>
+            </div>
             <div class="linkFooter">
                 <p>
-                    <a href ="#"></a>
+                    <a href ="presentation.html">A propos de moi</a>
                 </p>
                 <p>
-                    <a href ="#"></a>
+                    <a href ="questions.html">Vos questions</a>
                 </p>
                 <p>
-                    <a href ="#"></a>
+                    <a href ="mailto:chapli16@orange.fr">Me contacter</a>
                 </p>
             </div>
         </div>
     </footer>
 
     <script src="https://kit.fontawesome.com/9a0b48300d.js" crossorigin="anonymous"></script>
+    <script src="js/pageIndex.js"></script>
 
 </body>
 </html>
