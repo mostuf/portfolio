@@ -5,6 +5,11 @@ btnSubmitMessage.addEventListener("click", function (event) { // envoie du formu
     event.preventDefault();
 
     if( formContact.reportValidity() == true) {//verification si le formulaire est correctement rempli
+        const regexContent = /[^><%#!$/]{15,400}$/;
+        if(!regexContent.test(document.getElementById("message").value)){
+            alert( "Votre message doit contenir entre 15 et 400 caractères sans caractère speciaux. Merci d'effectuer les modifications nécessaires. Aurore")
+            return false
+        }
         let contact = { // je cree un objet avec les valeurs que je recupere par les id
             'username': document.getElementById("username").value,
             'email': document.getElementById("email").value,
@@ -12,7 +17,7 @@ btnSubmitMessage.addEventListener("click", function (event) { // envoie du formu
         }     
         let sendInfo = JSON.stringify( contact );
         //j'envoie des données au serveur    
-        fetch('#' +'/form', {
+        fetch('http://localhost:3000' +'/form', {
             method: "post",
             headers: {"Content-Type": "application/json;charset=UTF-8"},
             mode:"cors",
@@ -22,9 +27,10 @@ btnSubmitMessage.addEventListener("click", function (event) { // envoie du formu
             return response.json()
         }) 
         .then(function() { //j enregistre le retour  de l'api dans des variables
-            
-//ouverture de la page de confirmation ave les parametres dans l url
-               window.location.assign("index.html")
+            alert( 'Votre message a bien été expédié! Merci')
+            document.getElementById("username").value = "";
+            document.getElementById("email").value= "";
+            document.getElementById("message").value= "";
         })
         //le retour en cas de non connection au serveur 
         .catch(function(err) {
