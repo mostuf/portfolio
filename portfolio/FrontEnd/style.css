@@ -401,6 +401,7 @@ label {
   column-gap: 1rem;
   margin: 1rem;
   padding: 2rem 0;
+  align-items: center;
 }
 .knowledge .quality p::first-letter {
   font-weight: bold;
@@ -466,43 +467,6 @@ label {
   }
 }
 @media all and (min-width: 800px) {
-  .marmeid {
-    width: 45%;
-    top: 3rem;
-    right: 30%;
-  }
-
-  .smallTitle {
-    width: 60%;
-    margin-bottom: 2rem;
-    margin: auto;
-  }
-
-  .service__2 {
-    justify-content: center;
-  }
-
-  .service__2--store,
-.service__2--security,
-.service__2--responsive {
-    max-width: 13rem;
-  }
-
-  .service__3 > p {
-    margin: 3rem 0;
-  }
-
-  .offerFirstSite,
-.offerSecondSite {
-    width: 50%;
-  }
-
-  .offerService {
-    display: flex;
-    column-gap: 1rem;
-  }
-}
-@media all and (min-width: 800px) {
   .banniere img {
     object-fit: cover;
   }
@@ -518,7 +482,9 @@ label {
   }
 
   .smallTitle {
-    width: 40%;
+    width: 45%;
+    margin-bottom: 2rem;
+    margin: auto;
   }
 
   .asset {
@@ -530,9 +496,44 @@ label {
   .service__1 {
     margin: 2.5rem;
   }
+  .service__2 {
+    justify-content: center;
+  }
+  .service__2--store, .service__2--security, .service__2--responsive {
+    max-width: 13rem;
+  }
+  .service__3 > p {
+    margin: 3rem 0;
+  }
+
+  .offerFirstSite,
+.offerSecondSite {
+    width: 50%;
+  }
+
+  .offerService {
+    display: flex;
+    column-gap: 1rem;
+  }
 
   .btnUp {
     margin-left: 94%;
+  }
+
+  .cv p {
+    max-width: 80%;
+    margin: auto;
+  }
+
+  .knowledge img {
+    width: 8rem;
+  }
+  .knowledge .quality {
+    font-size: 1.3rem;
+    column-gap: 2rem;
+  }
+  .knowledge .quality p::first-letter {
+    font-size: 1.9rem;
   }
 }
 @media all and (min-width: 1400px) {
@@ -556,6 +557,10 @@ label {
 
   .btnUp {
     margin-left: 96%;
+  }
+
+  .cv p {
+    max-width: 70%;
   }
 }
 @media all and (min-width: 1800px) {
