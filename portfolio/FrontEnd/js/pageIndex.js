@@ -12,7 +12,7 @@ btnSubmitMessage.addEventListener("click", function (event) { // envoie du formu
         }     
         let sendInfo = JSON.stringify( contact );
         //j'envoie des données au serveur    
-        fetch('#' +'/formContact', {
+        fetch('#' +'/form', {
             method: "post",
             headers: {"Content-Type": "application/json;charset=UTF-8"},
             mode:"cors",
@@ -30,6 +30,6 @@ btnSubmitMessage.addEventListener("click", function (event) { // envoie du formu
         .catch(function(err) {
         console.log('Retour info Api problem: ' + err.message);
         })
-}
+    }
 
 });
