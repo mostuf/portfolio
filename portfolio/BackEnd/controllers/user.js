@@ -6,6 +6,10 @@ exports.userForm = (req, res, next) => {
         username: req.body.username,
         email: req.body.email,
         message: req.body.message,
-    }).then(() => res.status(201).send({ message: "mail crée !" }))
+    }).then(user=> {
+        res.status(201).json({ 
+            message: user
+        })            
+})
       .catch(error => res.status(400).json({ error: "éléments manquants" }));   
 }
