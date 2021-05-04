@@ -415,7 +415,7 @@ label {
 
 .questionsUser h1 {
   font-size: 1.5rem;
-  margin: 2rem;
+  margin: 2rem auto;
 }
 
 .frequentlyAsked {
@@ -535,6 +535,17 @@ label {
   .knowledge .quality p::first-letter {
     font-size: 1.9rem;
   }
+
+  .questionsUser h1 {
+    font-size: 1.8rem;
+    margin: 2.5rem auto;
+    padding-bottom: 1rem;
+  }
+
+  .frequentlyAsked {
+    max-width: 90%;
+    margin: auto;
+  }
 }
 @media all and (min-width: 1400px) {
   .marmeid {
@@ -561,6 +572,11 @@ label {
 
   .cv p {
     max-width: 70%;
+  }
+
+  .frequentlyAsked {
+    max-width: 80%;
+    padding-bottom: 2rem;
   }
 }
 @media all and (min-width: 1800px) {

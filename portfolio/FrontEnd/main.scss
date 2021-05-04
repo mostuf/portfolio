@@ -438,7 +438,7 @@ label{
 .questionsUser {
     & h1{
        font-size: 1.5rem; 
-       margin: 2rem;
+       margin: 2rem auto;
     }
 }
 
@@ -571,6 +571,16 @@ label{
             }
         }
     }
+// responsive page de questions
+    .questionsUser h1{
+       font-size:1.8rem;
+       margin: 2.5rem auto;
+       padding-bottom: 1rem;
+    }
+    .frequentlyAsked{
+        max-width:90%;
+        margin: auto;
+    }
 }
 
 @media all and (min-width: 1400px){
@@ -594,6 +604,12 @@ label{
 //responsive page de presentation
     .cv p{
         max-width:70%;
+    }
+// responsive page de questions
+    .frequentlyAsked{
+        max-width:80%;
+        padding-bottom: 2rem;
+        
     }
 }
 
