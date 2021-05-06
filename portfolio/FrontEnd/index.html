@@ -19,25 +19,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 
     <title>Portfolio Aurore</title>
 </head>
 
-<body>
-    
-
-<div onload="window.location.href = '#openModal';"> 
-    <div id="openModal" class="modalDialog">
-        <div>
-            <a href="#close" title="Close" class="close">Accéder au site</a>
-            <h2>Ma petite Modal Box</h2>
-            <p>Voic ma modalbox!!!</p>
-            <p>Alors !!bien ou bien!!</p>
+<body onload="window.location.href= '#openModal';">
+    <div class="modalTmp">
+        <div id="openModal" class="modalDialog">
+            <div>
+                <a href="#close" title="Close" class="close">X</a>
+                <i class="fas fa-exclamation-triangle"></i>
+                <p>Profitez du Chèque France Numérique de l'Etat (500€) pour rembourser votre site internet, jusqu'au 30 juin 2021. </p>
+                <p>Etes vous elligible? Vérifiez en quelques secondes</p>
+                <a href="https://cheque.francenum.gouv.fr/ecom/" class="linkGouv" > https://cheque.francenum.gouv.fr/ecom</a>
+            </div>
         </div>
     </div>
-</div>
-
 
     <header>
         <nav>
@@ -377,7 +376,8 @@
 
     <script src="https://kit.fontawesome.com/9a0b48300d.js" crossorigin="anonymous"></script>
     <script src="js/pageIndex.js"></script>
-   
+
+
 
 
 </body>
