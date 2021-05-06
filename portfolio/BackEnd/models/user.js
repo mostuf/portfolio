@@ -12,5 +12,5 @@ const User = database.define('User', {
     paranoid: false
     }
 );
-
+User.sync();
 module.exports = User;
