@@ -93,32 +93,32 @@ body {
 
 .modalDialog > div {
 	width: 400px;
-    border: 5px solid #ff0000;
+    border: 5px solid #f86ded;
 	position: relative;
 	margin: 10% auto;
 	padding: 15px 20px;
 	border-radius: 10px;
 	background: #fff;
-	background: -moz-linear-gradient(#fff, #999);
-	background: -webkit-linear-gradient(#fff, #999);
-	background: -o-linear-gradient(#fff, #999);
+	background: -moz-linear-gradient(#fff, #e1bee7);
+	background: -webkit-linear-gradient(#fff, #e1bee7);
+	background: -o-linear-gradient(#fff, #e1bee7);
     & a{
-        color: #fff;
+        color: #250dfd;
         text-decoration: underline;
         &:hover{
-            color: #123456;
+            color: #ad04fc;
         }
     }
     & .fas{
-        color: #ff0000;
+        color: #f86ded;
         float:left;
         padding: 10px;
         font-size: 1.2rem;
     }
 }
 .close {
-	background: #606061;
-	color: #FFFFFF;
+	background: #ad04fc;
+	color: #250dfd;
 	line-height: 25px;
 	position: absolute;
 	right: -12px;
@@ -133,10 +133,11 @@ body {
 	-moz-box-shadow: 1px 1px 3px #000;
 	-webkit-box-shadow: 1px 1px 3px #000;
 	box-shadow: 1px 1px 3px #000;
+    &:hover{
+        background: #250dfd;
+    }
 }
 
-
-.close:hover { background: #edff47; }
 
 .block {
     padding: 6rem 3% 3rem 3%;
