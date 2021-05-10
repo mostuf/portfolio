@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gerkx/maintainable-css-with-sass/issues"
   },
-  "homepage": "https://github.com/gerkx/maintainable-css-with-sass#readme"
+  "homepage": "https://github.com/gerkx/maintainable-css-with-sass#readme",
+  "dependencies": {
+    "emailjs-com": "^2.6.4"
+  }
 }
