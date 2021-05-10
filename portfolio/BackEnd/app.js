@@ -3,7 +3,7 @@ const app = express();
 const path = require('path'); 
 const mysql2 = require('mysql2');
 //routes 
-const userRoutes = require('./routes/user');
+const contactRoutes = require('./routes/contact');
 
 //entetes
 app.use((req, res, next) => {
@@ -17,6 +17,6 @@ app.use((req, res, next) => {
 app.use(express.urlencoded({extended: true})); //remplace bodyParser.json() deprecié depuis 2014
 app.use(express.json());
 
-app.use('/', userRoutes);
+app.use('/', contactRoutes);
 
 module.exports = app;

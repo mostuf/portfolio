@@ -1,14 +1,15 @@
 
-const User = require('../models/user');
+const Contact = require('../models/contact');
 
-exports.userForm = (req, res, next) => {
-    User.create({
+exports.contactForm = (req, res, next) => {
+    Contact.create({
         username: req.body.username,
         email: req.body.email,
         message: req.body.message,
-    }).then(user=> {
+        phone: req.body.phone
+    }).then(contact=> {
         res.status(201).json({ 
-            message: user
+            message: contact
         })            
 })
       .catch(error => res.status(400).json({ error: "éléments manquants" }));   
