@@ -1,9 +1,11 @@
 const express = require("express");
+const vhost = require("vhost");
 const app = express();
 const path = require('path'); 
 const mysql2 = require('mysql2');
 //routes 
 const contactRoutes = require('./routes/contact');
+const frontRoutes = require('./routes/front');
 
 //entetes
 app.use((req, res, next) => {
@@ -17,6 +19,7 @@ app.use((req, res, next) => {
 app.use(express.urlencoded({extended: true})); //remplace bodyParser.json() deprecié depuis 2014
 app.use(express.json());
 
-app.use('/', contactRoutes);
-
+// app.use('/', contactRoutes);
+//app.use(vhost("aurorecreationweb.fr", frontRoutes.loadFile));
+app.use(vhost("localhost:3000/front", frontRoutes.loadFile));
 module.exports = app;
